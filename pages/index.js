@@ -1,14 +1,19 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import Header from "./header";
 
 export default function Home() {
+  let title = "Next.js Index";
+  let message = "React Next.js sample page.";
+
   return (
-    <div className={styles.container}>
-      <Head>……中略……</Head>
-
-      <main className={styles.main}>……中略……</main>
-
-      <footer className={styles.footer}>……中略……</footer>
+    <div>
+      <Header title={title} />
+      <h1 className="bg-primary px-3 text-white display-4 text-right">React</h1>
+      <div className="container">
+        <h3 className="my-3 text-primary text-center">{title}</h3>
+        <div className="alert alert-primary text-left">
+          <p className="h5">{message}.</p>
+        </div>
+      </div>
     </div>
   );
 }
